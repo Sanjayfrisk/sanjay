@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            <h1>registration form</h1>
+
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="contain">
+            <h1 class="label">user login</h1>
+            <form class="login-form" method="post" name="login" onsubmit="return validated()">
+                <div class="font">Email or phone</div>
+                <input type="text" name="email">
+                <div id="email_error">please fill up your email or phone</div>
+                <div class="font2">password</div>
+                <input type="password" name="password">
+                <div id="password_error">please enter correct password</div>
+                <button type="submit">login</button>
+
+                </div>
+                <script src="valid.js"></script>
+            </form>
+        </div>
+        
+    </body>
+</html>
