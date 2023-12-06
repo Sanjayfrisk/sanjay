@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row{
+            box-sizing: border-box;
+        }
+
+     .column{
+        float: left;
+        width:35%;
+        padding: 10px;
+        height: 120px;
+        
+    }
+    .row:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .error{
+        color: red;
+      }
+      #captcha{
+        font-size: 24px;
+        margin-bottom: 10px;
+      }     
+     .checkbox{
+        float: right;
+     }      
+
+    </style>
+    </head>
+<body> 
+    <div>
+    <form id="billingid" class="billing">
+      <h1>Billing Page Validation</h1>
+        <div class="row">
+        <div class="column" style="background-color: #aaa;" >
+            <label for="">*</label>
+            <input type="text" id="cardid" class="card"  placeholder="Credit card No"><br>
+            <span class="error" id="carderror"></span><br>
+            <label for="">*expires</label>
+             <select id="expirymonth" >
+                <option value=""></option>
+             </select>
+            <select name="" id="expiryyear">
+                <option value=""></option>
+            </select><br>
+            <label for="">*Card Holder</label>
+            <input type="text" id="cardholderid" class="cardholder"  ><br>
+            <span class="error" id="holdererror"></span>
+        </div>
+        <div class="column" >
+            <label for="">*cvv/cvc</label>
+            <input type="text" id="cvvid" class="cvv" ><br>
+            <span class="error" id="cvverror"></span>
+        </div>
+    </div>
+        <h4>Enter Your billing address</h4>
+        <div>
+            <label for="">*</label>
+            <input type="text" id="firstid" class="first" placeholder="First Name"><br>
+            <span class="error" id="firsterror"></span><br>
+            <label for="">*</label>
+            <input type="text" id="lastid" class="last" placeholder="Last Name"> <br>
+             <span class="error" id="lasterror"></span><br>
+            <label for="">*</label>    
+            <input type="text" id="addressid" class="address" placeholder="Address"><br>
+            <span class="error" id="addresserror"></span><br>
+            <label for=""> </label>
+            <input type="text" id="lineid" class="line" placeholder="Address Line2"><br>
+           * <select name="country" id="countryid" >
+            <option value="">country</option>
+           <!-- <input type="text" id="countryid" class="country" placeholder="Country"><br>-->
+            <span class="error" id="countryerror"></span>
+        </select><br>
+            <label for="">*</label>
+            <input type="text" id="cityid" class="city" placeholder="city"><br>
+            <span class="error" id="cityerror"></span> <br>
+            <label for="">*</label>
+            <input type="text" id="postalid" class="postal" placeholder="Postal Code"><br>
+            <span class="error" id="postalerror"></span><br>
+            <label for="">*</label>
+            <input type="text" id="numberid" class="no" placeholder="Phoneno"><br>
+            <span class="error" id="numbererror"></span><br>
+            <input type="text" id="optionalid" class="first" placeholder="Business Name"><br>
+            <span id="captcha"></span>
+            <button onclick="Refresh()">refresh</button><br>
+            <input type="text" id="code"><br>
+            <p class="error" id="captchaerror"></p>
+            <p id="manditory"></p>
+        </div>
+        <div class="checkbox">  
+        <input type="checkbox" id="checkbox">i agree terms and condition <br>
+        <button onClick="BillingValidation()" >Place The order</button>
+    </div> 
+    </form>
+</div>
+    <script src="index.js"></script>
+</body>
+</html>
